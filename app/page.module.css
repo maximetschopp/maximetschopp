@@ -2,20 +2,51 @@
     background: var(--background-color);
     min-height: 100vh;
     overflow-x: hidden;
+    max-width: 1400px;
+    margin-inline: auto;
 }
 .projectContainer{
     margin-inline: 75px;
-    gap: 21px;
     margin-top: 21px;
-    display: grid;
-    grid-auto-flow: row;
-    grid-template-columns: repeat(3, 1fr);
     padding-bottom: 21px;
+}
+@media screen and (max-width: 1000px){
+    .projectContainer{
+        margin-inline: 10px;
+        gap: 7px;
+    }
+}
+@media screen and (min-width: 1000px){
+    .projectContainer{
+        margin-inline: 30px;
+        gap: 14px;
+    }
+}
+@media screen and (min-width: 1200px){
+    .projectContainer{
+        margin-inline: 60px;
+        gap: 21px;
+    }
 }
 @media screen and (max-aspect-ratio: 1/1){
     .projectContainer{
         display: flex;
         flex-direction: column;
         margin-inline: 0px;
+        gap: 21px;
+    }
+}
+@media screen and (min-aspect-ratio: 1/1){
+    .main{
+        background: var(--background-color);
+        min-height: 100vh;
+        overflow-x: hidden;
+        max-width: 1400px;
+        margin-inline: auto;
+    }
+    .projectContainer{
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-columns: repeat(3, 1fr);
     }
 }
