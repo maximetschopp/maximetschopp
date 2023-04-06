@@ -22,8 +22,6 @@ export default function Navbar() {
         projectsByCategory[category].push(project);
       });
 
-      console.log(projectsByCategory);
-
     return (
         <div className={styles.header + " " + styles.fixed}>
             <div className={styles.logo_container}>

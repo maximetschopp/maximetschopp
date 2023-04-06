@@ -16,6 +16,6 @@
     .projectContainer{
         display: flex;
         flex-direction: column;
-        margin-inline: 10px;
+        margin-inline: 0px;
     }
 }

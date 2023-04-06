@@ -5,11 +5,10 @@ import TagContainer from "../tagContainer/tagContainer"
 
 
 export default function Project({name, desktop_thumbnail, mobile_thumbnail, tags, category, grid_span} : ProjectProps) {
-    console.log(grid_span);
 
     let thumbnail = null;
     if(desktop_thumbnail.includes("mp4")){
-        thumbnail = <video className={styles.video} src={desktop_thumbnail} autoPlay loop muted />
+        thumbnail = <video className={styles.video} src={desktop_thumbnail} autoPlay loop muted playsInline />
     } else {
         thumbnail = <img className={styles.image} src={desktop_thumbnail} />
     }
