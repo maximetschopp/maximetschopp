@@ -1,0 +1,32 @@
+export const projectData = { "projects" : [
+    {
+      name: "The Lion's Roar Website",
+      dir: "/TLRIntro",
+      desktop_thumbnail: "/TLRIntro/desk_thumbnail.png",
+      mobile_thumbnail: "/TLRIntro/mobile_thumbnail.png",
+      category: "Web Development",
+      tags: ["React", "Google Cloud", "Next.js"],
+      color: "#D8D2CA",
+      grid_span: "3",
+    },
+    {
+      name: "The Lion's Roar Intro",
+      dir: "/TLRIntro",
+      desktop_thumbnail: "/TLRIntro/Intro_Main_1.mp4",
+      mobile_thumbnail: "/TLRIntro/mobile_thumbnail.png",
+      category: "3D-Rendering",
+      tags: ["After Effects", "Blender"],
+      color: "#D8D2CA",
+      grid_span: "2",
+    },
+    {
+      name: "Crystal Cave (Dynamic Machines)",
+      dir: "/TLRIntro",
+      desktop_thumbnail: "/TLRIntro/desk_thumbnail.png",
+      mobile_thumbnail: "/TLRIntro/mobile_thumbnail.png",
+      category: "2D-Design",
+      tags: ["After Effects", "Painter 3D Painter", "Blender"],
+      color: "#D8D2CA",
+      grid_span: "1",
+    },
+]};

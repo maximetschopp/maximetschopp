@@ -4,6 +4,9 @@
     left: 0;
     right: 0;
     z-index: 100;
+    background: none !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 .header{
     display: flex;
@@ -19,7 +22,7 @@
 .logo_container{
     width: 40px;
     height: 40px;
-    fill: var(--foreground-color-300);
+    fill: var(--foreground-color);
 }
 .dropdown_container{
     display: flex;
@@ -35,7 +38,7 @@
     cursor: pointer;
 }
 .category:hover{
-    background: var(--background-color-300);
+    background: var(--background-color-200);
 }
 .category:active{
     background: var(--background-color-400);

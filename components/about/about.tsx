@@ -1,9 +1,14 @@
 import styles from './about.module.css'
 import ColoredLogo from '@/components/logo/coloredLogo';
+import { Inter } from 'next/font/google'
+const inter = Inter({ 
+    subsets: ['latin'],
+    variable: '--font-inter',
+});
 
 export default function About() {
     return (
-        <section className={styles.about}>
+        <section className={styles.about + " " + inter.className}>
             <ColoredLogo />
             <div>
               <div className={styles.Heading}>Hey! 👋 I’m <span>Maxime</span>, </div>

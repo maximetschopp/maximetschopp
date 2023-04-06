@@ -2,15 +2,9 @@ import Image from 'next/image'
 import styles from './page.module.css'
 import About from '@/components/about/about'
 import Navbar from '@/components/Navbar/navbar'
-import projectData from './projectData.json'
-
-import { Inter } from 'next/font/google'
+import { projectData } from './utils/projectData'
 import Project from '@/components/project/project'
-import { ProjectProps } from './utils/types'
-const inter = Inter({ 
-  subsets: ['latin'],
-  variable: '--font-inter',
-})
+import { inter } from './utils/font'
 
 export default function Home() {
 
@@ -20,7 +14,7 @@ export default function Home() {
   return (
     <main className={styles.main + " " + inter.className}>
       <About />
-      <Navbar projectData={projectData} />
+      <Navbar />
       <div className={styles.projectContainer}>
         {projects.map((project) => {
           return(

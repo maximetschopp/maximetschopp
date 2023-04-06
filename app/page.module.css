@@ -4,8 +4,18 @@
     overflow-x: hidden;
 }
 .projectContainer{
-    display: grid;
-    grid-template-columns: 1fr;
     margin-inline: 75px;
     gap: 21px;
+    margin-top: 21px;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(3, 1fr);
+    padding-bottom: 21px;
+}
+@media screen and (max-aspect-ratio: 1/1){
+    .projectContainer{
+        display: flex;
+        flex-direction: column;
+        margin-inline: 10px;
+    }
 }

@@ -5,7 +5,7 @@
     padding-top: 100px;
     grid-template-columns: 30% 1fr;
     place-items: center;
-    font-family: inherit;
+    font-family: var(--inter-font);
     color: var(--foreground-color);
 }
 .Heading{
@@ -72,4 +72,7 @@
     margin-top: auto;
     margin-bottom: auto;
     user-select: none;
+}
+.arrow{
+    width: 100%;
 }
