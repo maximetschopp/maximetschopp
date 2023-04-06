@@ -8,6 +8,10 @@
     font-family: var(--inter-font);
     color: var(--foreground-color);
 }
+.logo{
+    width: 400px;
+    height: 400px;
+}
 .Heading{
     font-family: inherit;
     font-weight: 400;

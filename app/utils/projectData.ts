@@ -24,7 +24,7 @@ export const projectData = { "projects" : [
       dir: "/TLRIntro",
       desktop_thumbnail: "/TLRIntro/desk_thumbnail.png",
       mobile_thumbnail: "/TLRIntro/mobile_thumbnail.png",
-      category: "2D-Design",
+      category: "3D-Rendering",
       tags: ["After Effects", "Painter 3D Painter", "Blender"],
       color: "#D8D2CA",
       grid_span: "1",

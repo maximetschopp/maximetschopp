@@ -1,5 +1,7 @@
 import styles from './about.module.css'
 import ColoredLogo from '@/components/logo/coloredLogo';
+import Colored_Logo from '@/public/logo/Logo_Colored.webp';
+import Image from 'next/image'
 import { Inter } from 'next/font/google'
 const inter = Inter({ 
     subsets: ['latin'],
@@ -9,7 +11,8 @@ const inter = Inter({
 export default function About() {
     return (
         <section className={styles.about + " " + inter.className}>
-            <ColoredLogo />
+            {/* <ColoredLogo /> */}
+            <Image className={styles.logo} src={Colored_Logo} alt="Logo" />
             <div>
               <div className={styles.Heading}>Hey! 👋 I’m <span>Maxime</span>, </div>
               <div className={styles.Heading}>a student in Zurich,</div>
