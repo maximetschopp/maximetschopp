@@ -22,7 +22,7 @@ export const projectData = { "projects" : [
     {
       name: "Crystal Cave (Dynamic Machines)",
       dir: "/TLRIntro",
-      desktop_thumbnail: "/TLRIntro/desk_thumbnail.png",
+      desktop_thumbnail: "/CrystalCaves/LoopingFinal.mp4",
       mobile_thumbnail: "/TLRIntro/mobile_thumbnail.png",
       category: "3D-Rendering",
       tags: ["After Effects", "Painter 3D Painter", "Blender"],
