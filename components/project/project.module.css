@@ -6,6 +6,7 @@
         overflow: hidden;
         gap: 10px;
         height: auto;
+        color: var(--foreground-color) !important;
     }
     .image, .video{
         width: 100%;
@@ -18,7 +19,6 @@
         font-weight: 400;
         font-family: var(--font-space-grotesk) !important;
         letter-spacing: -2px;
-        color: var(--foreground-color);
         padding-inline: 5px;
     }
 }

@@ -22,7 +22,7 @@ export default function About() {
               <div className={styles.Heading}>a student in Zurich,</div>
               <div className={styles.Heading}>and a passionate creative.</div>
               <div className={styles.subtitle_container}>
-              <div className={styles.Heading2}>... along with many other things.</div>
+              <div className={styles.Heading2}>...along with many other things.</div>
               <button className={styles.about_me_button}>
                   <div className={styles.about_me_button_text}>About Me</div>
                   <svg className={styles.arrow} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">

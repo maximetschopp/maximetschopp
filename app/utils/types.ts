@@ -5,6 +5,6 @@ export type ProjectProps = {
     mobile_thumbnail: string;
     category: string;
     tags: string[];
-    color: string;
+    accentColor: string;
     grid_span: string;
 }

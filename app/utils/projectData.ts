@@ -6,7 +6,7 @@ export const projectData = { "projects" : [
       mobile_thumbnail: "/TLRIntro/mobile_thumbnail.png",
       category: "Web Development",
       tags: ["React", "Google Cloud", "Next.js"],
-      color: "#D8D2CA",
+      accentColor: "#000000",
       grid_span: "3",
     },
     {
@@ -16,7 +16,7 @@ export const projectData = { "projects" : [
       mobile_thumbnail: "/TLRIntro/mobile_thumbnail.png",
       category: "3D-Rendering",
       tags: ["After Effects", "Blender"],
-      color: "#D8D2CA",
+      accentColor: "#000000",
       grid_span: "2",
     },
     {
@@ -26,7 +26,7 @@ export const projectData = { "projects" : [
       mobile_thumbnail: "/TLRIntro/mobile_thumbnail.png",
       category: "3D-Rendering",
       tags: ["After Effects", "Painter 3D Painter", "Blender"],
-      color: "#D8D2CA",
+      accentColor: "#bcffb1",
       grid_span: "1",
     },
 ]};

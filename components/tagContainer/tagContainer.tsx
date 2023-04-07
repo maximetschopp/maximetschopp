@@ -22,7 +22,7 @@ function getColor(category: string) {
         case "3D-Rendering":
             return "#A88AD8";
         case "Web Development":
-            return "#CCDCDF";
+            return "#82b2bb";
         case "2D-Design":
             return "#F9C5B8";
     }

@@ -30,11 +30,13 @@
     fill: var(--foreground-color);
 }
 .dropdown_container{
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     gap: 7px;
+    height: 100%;
 }
 .category{
     padding: 10px;
@@ -48,6 +50,16 @@
 .category:active{
     background: var(--background-color-400);
 }
-.dropdown_content{
-    display: none;
+.background{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 100%;
+    background-color: rgb(80, 80, 80);
+    z-index: -1;
+    border-radius: 25px;
+}
+.category:hover .background, .category:focus .background, .background:hover, .background:focus{
+    width: 700px;
 }

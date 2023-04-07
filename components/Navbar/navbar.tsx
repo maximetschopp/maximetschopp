@@ -24,29 +24,25 @@ export default function Navbar() {
       });
 
     return (
-        <div className={styles.navbar + " " + styles.fixed + " " + inter.className}>
+        <nav className={styles.navbar + " " + styles.fixed + " " + inter.className}>
             <div className={styles.logo_container}>
                 <Logo />
             </div>
             <div className={styles.dropdown_container}>
                 {Object.keys(projectsByCategory).map((category) => {
                     return(
-                        <div className={styles.dropdown} key={category}>
-                            <div className={styles.category}>{category}</div>
-                            <div className={styles.dropdown_content}>
-                                {projectsByCategory[category].map((project) => {
-                                    return(
-                                        <div key={project.name} > {project.name} </div>
-                                    )
-                                })}
-                            </div>
-                        </div>
+                        <div className={styles.category} key={category}
+                            data-category={category}
+                        >{category}</div>
                     )
                 })}
+                <div className={styles.background}>
+
+                </div>
             </div>
             <div>
                 Contact
             </div>
-        </div>
+        </nav>
     );
 }
