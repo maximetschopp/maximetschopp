@@ -61,7 +61,7 @@
     border-radius: 0 0 25px 25px;
     grid-template-columns: 40% 1fr;
     padding-inline: 10px;
-    background-color: rgb(80, 80, 80);
+    background-color: rgb(1, 1, 1);
     display: none;
 }
 .dropdown_container:hover .expanded_container, .dropdown_container:active .expanded_container{
@@ -100,9 +100,8 @@
     object-fit: cover;
     border-radius: 15px;
     overflow: hidden;
-}
-.projectThumbnail{
     object-fit: "contain";
+    cursor: pointer;
 }
 .thumbnail{
     position: absolute;
@@ -111,4 +110,10 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    cursor: pointer;
+    scale: 1;
+    transition: scale 0.2s ease-in-out;
+}
+.thumbnail:hover{
+    scale: 1.1;
 }

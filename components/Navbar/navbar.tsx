@@ -14,6 +14,7 @@ export default function Navbar() {
 
     let projects = projectData.projects;
     let projectsByCategory = {} as { [key: string]: ProjectProps[] };
+    const [previousCategory, setPreviousCategory] = useState<string | undefined>(undefined);
     const [categoryProjects, setCategoryProjects] = useState<JSX.Element[] | undefined>(undefined);
     const [hoveredProject, setHoveredProject] = useState<ProjectProps | undefined>(undefined);
 
@@ -44,6 +45,10 @@ export default function Navbar() {
             )
         });
         setCategoryProjects(projectsList);
+        if(previousCategory !== category){
+            setHoveredProject(undefined);
+            setPreviousCategory(category);
+        }
     }
 
     const handleProjectHover = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
@@ -84,13 +89,11 @@ export default function Navbar() {
                         <div className={styles.project_info}>
                             <div className={styles.projectThumbnail}>
                                 <Thumbnail src={hoveredProject.desktop_thumbnail} classname={styles.thumbnail} />
-                                {/* <Image src={hoveredProject.desktop_thumbnail} alt="projectThumbnail"
-                                fill={true} className={styles.projectThumbnail}
-                                /> */}
                             </div>
                             <TagContainer tags={hoveredProject.tags} category={hoveredProject.category} />
                         </div>
                     }
+                    { !hoveredProject && <h1>&lt;-- please select a project </h1> }
                 </div>
             </div>
             <div>
