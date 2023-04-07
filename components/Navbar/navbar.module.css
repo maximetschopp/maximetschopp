@@ -50,16 +50,26 @@
 .category:active{
     background: var(--background-color-400);
 }
-.background{
+.expanded_container{
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translate(-50%, 0);
-    height: 100%;
-    background-color: rgb(80, 80, 80);
-    z-index: -1;
-    border-radius: 25px;
-}
-.category:hover .background, .category:focus .background, .background:hover, .background:focus{
     width: 700px;
+    height: 0;
+    transform: translate(-50%, 0);
+    z-index: -1;
+    border-radius: 0 0 25px 25px;
+    transition: width 0.3s ease-in-out;
+    overflow: hidden;
+}
+.dropdown_container:hover .expanded_container, .dropdown_container:active .expanded_container{
+    height: 300px;
+    transition: height 0.3s ease-in-out;
+}
+.expanded_container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 55px;
+    padding-inline: 10px;
+    background-color: rgb(80, 80, 80);
 }
