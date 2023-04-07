@@ -12,7 +12,7 @@ export default function About() {
         <section className={styles.about + " " + inter.className}>
             {/* <ColoredLogo /> */}
             <Image className={styles.logo} src={Colored_Logo} alt="Logo" />
-            <div>
+            <div className={styles.description}>
               <div className={styles.Heading}>Hey! 👋 I’m <span>Maxime</span>, </div>
               <div className={styles.Heading}>a student in Zurich,</div>
               <div className={styles.Heading}>and a passionate creative.</div>
