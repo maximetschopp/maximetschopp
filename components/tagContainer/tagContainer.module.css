@@ -21,7 +21,7 @@
     color: inherit;
     flex: 0 0 auto;
 }
-@media screen and (max-aspect-ratio: 1/1){
+@media screen and (max-aspect-ratio: 2 / 3){
     .tag{
         background: var(--foreground-color-400);   
     }

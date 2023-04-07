@@ -1,6 +1,5 @@
 import styles from './about.module.css'
-import ColoredLogo from '@/components/logo/coloredLogo';
-import Colored_Logo from '@/public/logo/Logo_Colored.webp';
+import Colored_Logo from '/public/Logo/Logo_Colored.webp';
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 const inter = Inter({ 
