@@ -90,6 +90,7 @@ export default function Navbar() {
                             <div className={styles.projectThumbnail}>
                                 <Thumbnail src={hoveredProject.desktop_thumbnail} classname={styles.thumbnail} />
                             </div>
+                            <div className={styles.projectTitle + ' ' + spaceGrotesk.className}>{hoveredProject.name}</div>
                             <TagContainer tags={hoveredProject.tags} category={hoveredProject.category} />
                         </div>
                     }

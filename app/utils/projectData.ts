@@ -25,7 +25,7 @@ export const projectData = { "projects" : [
       desktop_thumbnail: "/CrystalCaves/LoopingFinal.mp4",
       mobile_thumbnail: "/TLRIntro/mobile_thumbnail.png",
       category: "3D-Rendering",
-      tags: ["After Effects", "Painter 3D Painter", "Blender"],
+      tags: ["After Effects", "Substance 3D Painter", "Blender"],
       accentColor: "#bcffb1",
       grid_span: "1",
     },

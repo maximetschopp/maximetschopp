@@ -70,6 +70,7 @@
     padding-bottom: 10px;
 }
 .project_list{
+    position: relative;
     display: flex;
     flex-direction: column;
     padding-inline: 10px;
@@ -79,8 +80,8 @@
     padding-bottom: 5px;
     font-size: 21px;
     border-radius: 10px;
-    padding-inline: 4px;
-    width: fit-content;
+    padding-inline: 8px;
+    cursor: pointer;
 }
 .project:hover{
     background: var(--background-color-200);
@@ -91,6 +92,10 @@
     display: grid;
     gap: 5px;
     grid-template-rows: auto auto;
+}
+.projectTitle{
+    font-size: 21px;
+    font-weight: 600;
 }
 .projectThumbnail{
     position: relative;
