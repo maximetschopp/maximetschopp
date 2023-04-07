@@ -4,6 +4,7 @@ import { ProjectProps } from '@/app/utils/types';
 import Logo from '../logo/logo';
 import styles from './navbar.module.css';
 import { projectData } from '@/app/utils/projectData';
+import { inter } from '@/app/utils/font';
 
 export default function Navbar() {
 
@@ -23,7 +24,7 @@ export default function Navbar() {
       });
 
     return (
-        <div className={styles.header + " " + styles.fixed}>
+        <div className={styles.navbar + " " + styles.fixed + " " + inter.className}>
             <div className={styles.logo_container}>
                 <Logo />
             </div>
