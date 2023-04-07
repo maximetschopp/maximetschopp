@@ -37,7 +37,7 @@
     .about{
         display: flex;
         flex-direction: row;
-        justify-content: start;
+        justify-content: flex-start;
         align-items: center;
         gap: 41px;
         margin-inline: auto;
@@ -117,7 +117,7 @@
 }
 @media screen and (min-width: 600px) and (min-aspect-ratio: 2 / 3){
     .about{
-        justify-content: start;
+        justify-content: flex-start;
         padding-inline: 10px;
     }
     .description{
