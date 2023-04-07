@@ -10,7 +10,7 @@ export default function TagContainer({tags, category} : {tags: string[], categor
             <div className={styles.category} style={{background : color}} >{category}</div>
             {tags.map((tag) => {
                 return(
-                    <div className={styles.tag}>{tag}</div>
+                    <div className={styles.tag} key={tag}>{tag}</div>
                 )
             })}
         </div>
