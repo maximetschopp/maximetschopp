@@ -116,9 +116,11 @@
     height: 100%;
     object-fit: cover;
     cursor: pointer;
-    scale: 1;
-    transition: scale 0.2s ease-in-out;
+    opacity: 1;
+    filter: brightness(1);
+    transition: scale 0.2s ease-in-out, opacity 0.2s ease-in-out;
 }
 .thumbnail:hover{
     scale: 1.1;
+    opacity: 0.8;
 }

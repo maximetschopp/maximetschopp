@@ -5,13 +5,14 @@ import Logo from '../logo/logo';
 import styles from './navbar.module.css';
 import { projectData } from '@/app/utils/projectData';
 import { inter, spaceGrotesk } from '@/app/utils/font';
-import Image from 'next/image';
 import { useState } from 'react';
 import TagContainer from '../tagContainer/tagContainer';
 import Thumbnail from '../Thumbnail/thumbnail';
+import { useRouter } from 'next/navigation';
 
 export default function Navbar() {
 
+    const router = useRouter();
     let projects = projectData.projects;
     let projectsByCategory = {} as { [key: string]: ProjectProps[] };
     const [previousCategory, setPreviousCategory] = useState<string | undefined>(undefined);
@@ -66,9 +67,16 @@ export default function Navbar() {
         setHoveredProject(projectObj);
     }
 
+    const handleLogoClick = () => {
+        router.push('/');
+    }
+    const handleContactClick = () => {
+        router.push('/about');
+    }
+
     return (
         <nav className={styles.navbar + " " + styles.fixed + " " + inter.className}>
-            <div className={styles.logo_container}>
+            <div className={styles.logo_container} onClick={handleLogoClick}>
                 <Logo />
             </div>
             <div className={styles.dropdown_container}>
@@ -97,7 +105,7 @@ export default function Navbar() {
                     { !hoveredProject && <h1>&lt;-- please select a project </h1> }
                 </div>
             </div>
-            <div>
+            <div onClick={handleContactClick}>
                 Contact
             </div>
         </nav>
