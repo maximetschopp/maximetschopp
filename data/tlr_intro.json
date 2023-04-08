@@ -2,6 +2,8 @@
     "title": "The Lion's Roar Intro",
     "category" : "3D-Rendering",
     "tags" : ["After Effects", "Blender", "Substance 3D Painter"],
+    "accentColor" : "rgb(245, 232, 220)",
+    "gradientColor" : "rgba(245, 232, 220, 1)",
     "body" : [
         {
             "type" : "video",

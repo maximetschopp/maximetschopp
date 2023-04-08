@@ -47,7 +47,13 @@ export default function ProjectPage({ params: {slug} }: Props) {
       });
 
     return (
-      <div className={styles.main}>
+      <div className={styles.main}
+      style={{
+        background: `
+          linear-gradient(180deg, rgba(28, 28, 28, 1) 0%, ${projectData.gradientColor} 100%)
+        `
+        }}
+      >
           <div className={styles.container}>
                 <section className={styles.header}>
                     <h1 className={styles.title + " " + spaceGrotesk.className}>{projectData.title}</h1>

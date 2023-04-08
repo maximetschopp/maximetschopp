@@ -2,7 +2,8 @@
     "title": "Crystal Cave (Dynamic Machines)",
     "category" : "3D-Rendering",
     "tags" : ["After Effects", "Blender", "Google Earth", "Illustrator"],
-    "accentColor" : "#f5f5f5",
+    "accentColor" : "rgb(129, 225, 139)",
+    "gradientColor" : "rgba(129, 225, 139, 1)",
     "body" : [
         {
             "type" : "video",

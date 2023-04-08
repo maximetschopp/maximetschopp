@@ -2,6 +2,8 @@
     "title": "The Lion's Roar Website",
     "category" : "Web Development",
     "tags" : ["React", "Google Cloud", "Next.js"],
+    "accentColor" : "rgb(245, 232, 220)",
+    "gradientColor" : "rgba(245, 232, 220, 1)",
     "body" : [
         {
             "type" : "video",

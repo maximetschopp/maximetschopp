@@ -5,14 +5,12 @@
     width: 100vw;
     min-height: 100vh;
     --background-start: rgba(28, 28, 28, 1);
-    --background-end: rgb(129, 225, 139);
+    --background-end: rgba(28, 28, 28, 1);
     color: white;
-
-    background:var(--background-start);
+    background: var(--background-start);
     background: -moz-linear-gradient(180deg, var(--background-start) 0%, var(--background-end) 100%);
     background: -webkit-linear-gradient(180deg, var(--background-start) 0%, var(--background-end) 100%);
     background: linear-gradient(180deg, var(--background-start) 0%, var(--background-end) 100%);
-
 }
 .container{
     position: relative;
