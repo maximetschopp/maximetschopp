@@ -1,14 +1,28 @@
-// src: string, classname?: string
+'use client'
+import { useRouter } from "next/navigation";
 
 type ThumbnailProps = {
     src: string,
-    classname?: string
+    classname?: string,
+    dir: string
 }
 
-export default function Thumbnail({src, classname} : ThumbnailProps){
+export default function Thumbnail({src, classname, dir} : ThumbnailProps){
+
+    const router = useRouter();
+
+    const handleProjectClick = (dir : string) => {
+        router.push('/project/' + dir);
+    }
+
     if(src.includes("mp4")){
-        return <video className={classname + " zoomtofill"} src={src} autoPlay loop muted playsInline />
+        return <video className={classname + " zoomtofill"} src={src}
+                onClick={() => handleProjectClick(dir)}
+                autoPlay loop muted playsInline 
+            />;
     } else {
-        return <img className={classname} src={src} />
+        return <img className={classname} src={src}
+            onClick={() => handleProjectClick(dir)}
+        />;
     }
 }

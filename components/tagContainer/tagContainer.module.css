@@ -8,15 +8,12 @@
     scrollbar-width: 0px;
     padding-inline: 5px;
 
-    --border: 1px solid rgba(0, 0, 0, 0.56);
-    --categoryBorder: 1px solid rgba(0, 0, 0, 0.56);
 }
 .tag_container::-webkit-scrollbar{
     display: none;
 }
 .category,
 .tag{
-    border: var(--border);
     padding-inline: 8px;
     border-radius: 30px;
     backdrop-filter: blur(10px);
@@ -24,9 +21,10 @@
     color: inherit;
     flex: 0 0 auto;
     box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.56);
 }
 .category{
-    border: var(--categoryBorder);
+    border: 1px solid rgba(0, 0, 0, 0.56);
 }
 @media screen and (max-aspect-ratio: 2 / 3){
     .tag{

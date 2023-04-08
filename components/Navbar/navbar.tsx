@@ -9,6 +9,7 @@ import { useState } from 'react';
 import TagContainer from '../tagContainer/tagContainer';
 import Thumbnail from '../Thumbnail/thumbnail';
 import { useRouter } from 'next/navigation';
+import { goToProject } from '@/app/utils/utils';
 
 export default function Navbar() {
 
@@ -105,10 +106,12 @@ export default function Navbar() {
                         hoveredProject &&
                         <div className={styles.project_info}>
                             <div className={styles.projectThumbnail}>
-                                <Thumbnail src={hoveredProject.desktop_thumbnail} classname={styles.thumbnail} />
+                                <Thumbnail src={hoveredProject.desktop_thumbnail} classname={styles.thumbnail} dir={hoveredProject.dir} />
                             </div>
                             <div className={styles.projectTitle + ' ' + spaceGrotesk.className}>{hoveredProject.name}</div>
-                            <TagContainer tags={hoveredProject.tags} category={hoveredProject.category} />
+                            <TagContainer tags={hoveredProject.tags} category={hoveredProject.category} 
+                                tagColor='rgb(255,255,255)' categoryColor='white'
+                            />
                         </div>
                     }
                     { !hoveredProject && <h1>&lt;-- please select a project </h1> }

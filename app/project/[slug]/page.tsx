@@ -51,7 +51,8 @@ export default function ProjectPage({ params: {slug} }: Props) {
           <div className={styles.container}>
                 <section className={styles.header}>
                     <h1 className={styles.title + " " + spaceGrotesk.className}>{projectData.title}</h1>
-                    <TagContainer tags={projectData.tags} category={projectData.category} border={'1px solid rgba(255, 255, 255, 0.69)'} />
+                    <TagContainer tags={projectData.tags} category={projectData.category} 
+                    tagColor={'rgba(255, 255, 255, 0.9)'} />
                 </section>
                 {bodyContent}
           </div>

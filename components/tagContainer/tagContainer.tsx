@@ -1,40 +1,38 @@
-'use client'
-
-import { useEffect, useState } from 'react'
 import styles from './tagContainer.module.css'
 import { inter } from '@/app/utils/font'
 
 type Props = {
     tags: string[],
     category: string,
-    border?: string
-    categoryBorder?: string
+    tagColor?: string
+    categoryColor?: string
 }
 
-export default function TagContainer({tags, category, border, categoryBorder} : Props) {
+export default function TagContainer({tags, category, tagColor, categoryColor} : Props) {
 
-    let color = getColor(category);
-    const [style, setStyle] = useState({} as React.CSSProperties);
-
-    useEffect(() => {
-        let styleObj = {} as React.CSSProperties;
-        if (border) {
-          styleObj = { ...styleObj, "--border": `${border} !important` } as any;
-        }
-        if (categoryBorder) {
-          styleObj = { ...styleObj, "--categoryBorder": `${categoryBorder} !important` } as any;
-        }
-        setStyle(styleObj);
-      }, [border, categoryBorder]);
+    let categoryBackgroundColor = getColor(category);
 
     return(
         <div className={styles.tag_container + " " + inter.className}
-        style={style}
         >
-            <div className={styles.category} style={{background : color}} >{category}</div>
+            <div 
+                className={styles.category}
+                style={{
+                    background : categoryBackgroundColor, 
+                    border: "1px solid " + categoryColor + " !important",
+                    color: categoryColor,
+                }}
+            >
+                {category}
+            </div>
             {tags.map((tag) => {
                 return(
-                    <div className={styles.tag} key={tag}>{tag}</div>
+                    <div className={styles.tag} key={tag}
+                    style={{
+                        border: "1px solid " + tagColor + " !important",
+                        color: tagColor,
+                    }}
+                    >{tag}</div>
                 )
             })}
         </div>
