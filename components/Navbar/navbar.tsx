@@ -38,16 +38,22 @@ export default function Navbar() {
         let categoryProjects = projectsByCategory[category];
         let projectsList = categoryProjects.map((project) => {
             return(
-                <div className={styles.project + " " + spaceGrotesk.className} key={project.name}
-                    data-project={project.name} data-category={category}
-                    onMouseEnter={handleProjectHover} onMouseOver={handleProjectHover}>
-                    {project.name}
+                <div
+                  className={styles.project + " " + spaceGrotesk.className}
+                  key={project.name}
+                  data-project={project.name}
+                  data-category={category}
+                  onMouseEnter={handleProjectHover}
+                  onMouseOver={handleProjectHover}
+                  onClick={() => handleProjectClick(project.dir)} // add onClick here
+                >
+                  {project.name}
                 </div>
             )
         });
         setCategoryProjects(projectsList);
-        if(previousCategory !== category){
-            setHoveredProject(undefined);
+        if(previousCategory !== category || previousCategory === undefined){
+            setHoveredProject(categoryProjects?.[0]);
             setPreviousCategory(category);
         }
     }
@@ -72,6 +78,9 @@ export default function Navbar() {
     }
     const handleContactClick = () => {
         router.push('/about');
+    }
+    const handleProjectClick = (dir : string) => {
+        router.push('/project/' + dir);
     }
 
     return (
