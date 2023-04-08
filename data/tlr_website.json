@@ -1,7 +1,7 @@
 {
-    "title": "The Lion's Roar Intro",
-    "category" : "3D-Rendering",
-    "tags" : ["After Effects", "Blender", "Substance 3D Painter"],
+    "title": "The Lion's Roar Website",
+    "category" : "Web Development",
+    "tags" : ["React", "Google Cloud", "Next.js"],
     "body" : [
         {
             "type" : "video",

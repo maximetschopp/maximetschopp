@@ -1,11 +1,12 @@
 {
-    "title": "The Lion's Roar Intro",
+    "title": "Crystal Cave (Dynamic Machines)",
     "category" : "3D-Rendering",
-    "tags" : ["After Effects", "Blender", "Substance 3D Painter"],
+    "tags" : ["After Effects", "Blender", "Google Earth", "Illustrator"],
+    "accentColor" : "#f5f5f5",
     "body" : [
         {
             "type" : "video",
-            "src" : "/tlr_intro/Intro_Main_1.mp4"
+            "src" : "/crystal_caves/LoopingFinal.mp4"
         },
         {
             "type" : "text",

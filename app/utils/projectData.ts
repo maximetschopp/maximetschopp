@@ -1,7 +1,7 @@
 export const projectData = { "projects" : [
     {
       name: "The Lion's Roar Website",
-      dir: "tlr_intro",
+      dir: "tlr_website",
       desktop_thumbnail: "/tlr_intro/desk_thumbnail.png",
       mobile_thumbnail: "/tlr_intro/mobile_thumbnail.png",
       category: "Web Development",
