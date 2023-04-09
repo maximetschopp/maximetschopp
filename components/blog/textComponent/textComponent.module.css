@@ -1,6 +1,56 @@
 .text{
-    margin-inline: 120px;
+    margin-inline: 140px;
     font-size: 21px;
     line-height: 30px;
     font-weight: 200;
+}
+.paragraph > a {
+    color: rgb(99, 187, 231) !important;
+}
+@media screen and (max-aspect-ratio: 2 / 3){
+    .text{
+        margin-inline: 3px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+@media screen and (min-aspect-ratio: 2/3) and (max-width: 600px) {
+    .text{
+        margin-inline: 5px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+@media screen and (min-aspect-ratio: 2/3) and (min-width: 600px) {
+    .text{
+        margin-inline: 26px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+@media screen and (min-aspect-ratio: 2/3) and (min-width: 800px) {
+    .text{
+        margin-inline: 40px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+@media screen and (min-aspect-ratio: 2/3) and (min-width: 1000px) {
+    .text{
+        margin-inline: 60px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+@media screen and (min-aspect-ratio: 2/3) and (min-width: 1300px) {
+    .text{
+        margin-inline: 140px;
+        font-size: 21px;
+        line-height: 30px;
+    }
 }

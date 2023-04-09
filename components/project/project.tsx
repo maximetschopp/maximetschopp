@@ -6,6 +6,7 @@ import { spaceGrotesk, inter } from '@/app/utils/font'
 import TagContainer from "../tagContainer/tagContainer"
 import Thumbnail from "../Thumbnail/thumbnail";
 import { useRouter } from 'next/navigation'
+import Link from "next/link";
 
 export default function Project({name, desktop_thumbnail, mobile_thumbnail, tags, category, grid_span, accentColor, dir} : ProjectProps) {
 

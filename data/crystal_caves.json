@@ -15,13 +15,13 @@
         {
             "type" : "text",
             "props" : {
-                "text" : "As a part of the student-run news program at Zurich International School, I contributed by creating an intro cinematic using my 3D animating skills, and 2D graphic design. Additionally, I worked with a partner utilising google cloud services to create a user-friendly interface accessible on both mobile and desktop. The website serves as a content hub for the school's news program and features an admin panel for users to upload their own content. I am proud to have contributed to the school's community and their mission of sharing stories through the Lion's Roar; sharing student voices."
+                "body" : "The <strong>Dynamic Machines Challenge</strong>, was a 3D render competition, where each contestant contributed a 10 second segment video to collectively create one giant marble machine. My entry was cave themed, more specifically, a crystal cave. I sketched designs on paper, and on my iPad, then <strong>created</strong> and <strong>modelled</strong> the assets in blender and substance 3D painter. Although I wasn't one of the winners, the project help me <strong>develop</strong> and become confident in my 3D workflow, which then I was able to apply to my later projects like the <a href='/project/tlr_intro'>Intro for The Lion's Roar.</a> <br><br> Here is the video of the full marble machine containing all submissions:"
             }
         },
         {
             "type" : "video",
             "props" : {
-                "src" : "https://youtu.be/b0-IkxXyhmY?t=6531",
+                "src" : "https://www.youtube.com/embed/b0-IkxXyhmY?t=6532",
                 "caption" : "The Intro for the Lion's Roar"
             }
         }

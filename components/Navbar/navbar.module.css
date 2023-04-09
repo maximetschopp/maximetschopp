@@ -30,6 +30,9 @@
         height: 40px;
         fill: var(--foreground-color);
     }
+    .logo_container:hover{
+        fill: var(--foreground-color-300);
+    }
     .dropdown_container{
         position: relative;
         display: flex;

@@ -15,7 +15,7 @@ export type BodyContent = {
 }
 
 export type textComponentProps = {
-    text: string;
+    body: string;
     align?: string;
     color?: string;
     size?: string;

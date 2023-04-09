@@ -1,6 +1,43 @@
-
-.video{
-    margin-inline: 50px;
-    width: calc(100% - 100px);
+.videoContainer{
     aspect-ratio: 16/9;
+}
+.video{
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: contain;
+}
+@media screen and (max-aspect-ratio: 2 / 3){
+    .videoContainer{
+        margin-inline: 10px;
+    }
+}
+
+@media screen and (min-aspect-ratio: 2/3) and (max-width: 600px) {
+    .videoContainer{
+        margin-inline: 15px;
+    }
+}
+
+@media screen and (min-aspect-ratio: 2/3) and (min-width: 600px) {
+    .videoContainer{
+        margin-inline: 66px;
+    }
+}
+
+@media screen and (min-aspect-ratio: 2/3) and (min-width: 800px) {
+    .videoContainer{
+        margin-inline: 90px
+    }
+}
+
+@media screen and (min-aspect-ratio: 2/3) and (min-width: 1000px) {
+    .videoContainer{
+        margin-inline: 110px
+    }
+}
+
+@media screen and (min-aspect-ratio: 2/3) and (min-width: 1300px) {
+    .videoContainer{
+        margin-inline: 100px;
+    }
 }
