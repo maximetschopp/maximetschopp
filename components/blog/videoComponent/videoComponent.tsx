@@ -13,7 +13,7 @@ export default function VideoComponent({ src, alt, caption } : videoComponentPro
             }
             {
                 isYoutube &&
-                <iframe src={src} width={'auto'} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe src={src} width={'auto'} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
             }
         </div>
     )
