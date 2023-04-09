@@ -2,6 +2,10 @@ import TagContainer from '@/components/tagContainer/tagContainer'
 import styles from './styles.module.css'
 import { getProjectData } from '@/app/utils/getProjectData'
 import { spaceGrotesk, inter } from '@/app/utils/font'
+import VideoComponent from '@/components/blog/videoComponent/videoComponent'
+import { BodyContent, imageComponentProps, textComponentProps, videoComponentProps } from '@/app/utils/types'
+import ImageComponent from '@/components/blog/imageComponent/imageComponent'
+import TextComponent from '@/components/blog/textComponent/textComponent'
 
 type Props ={
     params: {
@@ -14,37 +18,34 @@ export default function ProjectPage({ params: {slug} }: Props) {
     const projectData = getProjectData(slug);
     console.log(projectData);
 
-    interface BodyContent {
-        type: string;
-        src?: string;
-        content?: string;
-    }
-      
-    const bodyContent = projectData.body.map(({ type, src, content }: BodyContent, index : number) => {
-        switch (type) {
-          case 'text':
-            return (
-              <div key={index} className={styles.text + " " + inter.className}>
-                <p className={styles.paragraph}>{content}</p>
-              </div>
-            );
-          case 'image':
-            return (
-              <div key={index} className={styles.image}>
-                <img src={src} alt={`Image ${index + 1}`} />
-              </div>
-            );
-          case 'video':
-            return (
-              <div key={index} className={styles.videoContainer}>
-                <video className={styles.video} src={src} controls muted autoPlay playsInline loop></video>
-              </div>
-            );
-          // add additional cases for each content type
-          default:
-            return null;
+    const bodyContent = projectData.body.map(({ type, props }: BodyContent, index: number) => {
+      switch (type) {
+        case 'text': {
+          const { text, ...rest } = props as textComponentProps;
+          return text ? (
+            // <div key={index} className={`${styles.text} ${inter.className}`}>
+            //   <p className={styles.paragraph} {...rest}>{text}</p>
+            // </div>
+            <TextComponent key={index} text={text} {...rest} />
+          ) : null;
         }
-      });
+        case 'image': {
+          const { src, ...rest } = props as imageComponentProps;
+          return src ? (
+            <ImageComponent key={index} src={src} {...rest} />
+          ) : null;
+        }
+        case 'video': {
+          const { src, ...rest } = props as videoComponentProps;
+          return src ? (
+            <VideoComponent key={index} src={src} {...rest} />
+          ) : null;
+        }
+        default:
+          return null;
+      }
+    });
+    
 
     return (
       <div className={styles.main}

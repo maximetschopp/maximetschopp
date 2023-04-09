@@ -7,11 +7,23 @@
     "body" : [
         {
             "type" : "video",
-            "src" : "/crystal_caves/LoopingFinal.mp4"
+            "props" : {
+                "src" : "/crystal_caves/LoopingFinal.mp4",
+                "caption" : "Crystal Cave (Dynamic Machines)"
+            }
         },
         {
             "type" : "text",
-            "content" : "As a part of the student-run news program at Zurich International School, I contributed by creating an intro cinematic using my 3D animating skills, and 2D graphic design. Additionally, I worked with a partner utilising google cloud services to create a user-friendly interface accessible on both mobile and desktop. The website serves as a content hub for the school's news program and features an admin panel for users to upload their own content. I am proud to have contributed to the school's community and their mission of sharing stories through the Lion's Roar; sharing student voices."
+            "props" : {
+                "text" : "As a part of the student-run news program at Zurich International School, I contributed by creating an intro cinematic using my 3D animating skills, and 2D graphic design. Additionally, I worked with a partner utilising google cloud services to create a user-friendly interface accessible on both mobile and desktop. The website serves as a content hub for the school's news program and features an admin panel for users to upload their own content. I am proud to have contributed to the school's community and their mission of sharing stories through the Lion's Roar; sharing student voices."
+            }
+        },
+        {
+            "type" : "video",
+            "props" : {
+                "src" : "https://youtu.be/b0-IkxXyhmY?t=6531",
+                "caption" : "The Intro for the Lion's Roar"
+            }
         }
     ]
 }

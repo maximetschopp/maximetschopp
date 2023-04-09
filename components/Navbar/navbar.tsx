@@ -9,7 +9,6 @@ import { useState } from 'react';
 import TagContainer from '../tagContainer/tagContainer';
 import Thumbnail from '../Thumbnail/thumbnail';
 import { useRouter } from 'next/navigation';
-import { goToProject } from '@/app/utils/utils';
 
 export default function Navbar() {
 
