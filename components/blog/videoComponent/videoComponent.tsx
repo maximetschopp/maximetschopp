@@ -13,7 +13,7 @@ export default function VideoComponent({ src, alt, caption } : videoComponentPro
             }
             {
                 isYoutube &&
-                <iframe className={styles.video} width="1618" height="640" src={src} title="When 1,900 3D artists collaborate on one project | Dynamic Machines [ ALL RENDERS ]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe className={styles.video} width="1618" height="640" src={src} title="When 1,900 3D artists collaborate on one project | Dynamic Machines [ ALL RENDERS ]" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
             }
         </div>
     )
