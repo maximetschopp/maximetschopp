@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar/navbar'
 import './globals.css'
+import NavbarMobile from '@/components/Navbar Mobile/navbarMobile'
 
 export const metadata = {
   title: 'maximetschopp',
@@ -15,6 +16,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Navbar />
+        <NavbarMobile />
         {children}
       </body>
     </html>

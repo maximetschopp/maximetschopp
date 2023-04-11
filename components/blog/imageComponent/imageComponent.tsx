@@ -7,8 +7,9 @@ export default function ImageComponent({ src, alt, caption } : imageComponentPro
     alt = alt || 'Image';
 
     return (
-        <div className={styles.image}>
-            <Image src={src} alt={alt} fill />
+        <div className={styles.imageContainer}>
+            <Image className={styles.image} src={src} alt={alt} fill />
         </div>
     )
 }
+

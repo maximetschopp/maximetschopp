@@ -16,16 +16,12 @@ type Props ={
 export default function ProjectPage({ params: {slug} }: Props) {
 
     const projectData = getProjectData(slug);
-    console.log(projectData);
 
     const bodyContent = projectData.body.map(({ type, props }: BodyContent, index: number) => {
       switch (type) {
         case 'text': {
           const { body, ...rest } = props as textComponentProps;
           return body ? (
-            // <div key={index} className={`${styles.text} ${inter.className}`}>
-            //   <p className={styles.paragraph} {...rest}>{text}</p>
-            // </div>
             <TextComponent key={index} body={body} {...rest} />
           ) : null;
         }

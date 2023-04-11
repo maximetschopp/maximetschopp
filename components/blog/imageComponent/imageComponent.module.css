@@ -1,0 +1,45 @@
+.imageContainer{
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    position: relative;
+}
+.image{
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: contain;
+}
+@media screen and (max-aspect-ratio: 2 / 3){
+    .imageContainer{
+        width: calc(100% - 20px);
+    }
+}
+
+@media screen and (min-aspect-ratio: 2/3) and (max-width: 600px) {
+    .imageContainer{
+        width: calc(100% - 30px);
+    }
+}
+
+@media screen and (min-aspect-ratio: 2/3) and (min-width: 600px) {
+    .imageContainer{
+        width: calc(100% - 132px);
+    }
+}
+
+@media screen and (min-aspect-ratio: 2/3) and (min-width: 800px) {
+    .imageContainer{
+        width: calc(100% - 180px);
+    }
+}
+
+@media screen and (min-aspect-ratio: 2/3) and (min-width: 1000px) {
+    .imageContainer{
+        width: calc(100% - 220px);
+    }
+}
+
+@media screen and (min-aspect-ratio: 2/3) and (min-width: 1300px) {
+    .imageContainer{
+        width: calc(100% - 200px);
+    }
+}

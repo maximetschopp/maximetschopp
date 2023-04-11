@@ -62,14 +62,12 @@ export default function Navbar() {
         let project = e.currentTarget.dataset.project;
         let category = e.currentTarget.dataset.category;
         if(!project || !category) return;
-        console.log(project);
         // get project data from projectsByCategory
         let projectData = projectsByCategory[category];
         let projectObj = projectData.find((projectObj) => {
             return projectObj.name === project;
         });
         if(!projectObj) return;
-        console.log(projectObj);
         setHoveredProject(projectObj);
     }
 

@@ -28,12 +28,13 @@
 }
 @media screen and (max-aspect-ratio: 2 / 3){
     .tag{
-        background: var(--foreground-color-400);   
+        background: var(--foreground-color-400);
     }
     .category, .tag{
         border: none;
         font-size: 13px;
         padding: 3px;
         padding-inline: 8px;
+        color: black !important;
     }
 }

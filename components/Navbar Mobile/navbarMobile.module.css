@@ -1,0 +1,13 @@
+
+
+@media screen and (max-aspect-ratio: 2 / 3){
+    .nav{
+        display: flex;
+    }
+}
+
+@media screen and (min-aspect-ratio: 2/3) and (max-width: 600px) {
+    .nav{
+        display: none !important;
+    }
+}
