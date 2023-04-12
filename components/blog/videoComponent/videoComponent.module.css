@@ -10,6 +10,9 @@
     .videoContainer{
         margin-inline: 10px;
     }
+    .video::-webkit-media-controls {
+        display: none !important;
+    }
 }
 
 @media screen and (min-aspect-ratio: 2/3) and (max-width: 600px) {
