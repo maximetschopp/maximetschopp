@@ -1,4 +1,5 @@
 import styles from './navbarMobile.module.css';
+import Logo from '@/components/Logo/logo';
 
 export default function NavbarMobile() {
 
@@ -12,15 +13,14 @@ export default function NavbarMobile() {
 }
 
 
-
 function projectsButton(){
     return(
-    <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g filter="url(#filter0_d_3_116)">
-    <rect x="5" y="1" width="21" height="21" rx="7" stroke="#D9D9D9" stroke-width="2"/>
-    <rect x="5" y="27" width="21" height="21" rx="7" stroke="#D9D9D9" stroke-width="2"/>
-    <rect x="31" y="1" width="21" height="21" rx="7" stroke="#D9D9D9" stroke-width="2"/>
-    <rect x="31" y="27" width="21" height="21" rx="7" stroke="#D9D9D9" stroke-width="2"/>
+    <svg width="57" height="57" viewBox="0 0 57 57" className={styles.projects} xmlns="http://www.w3.org/2000/svg">
+    <g>
+    <rect x="5" y="1" width="21" height="21" rx="7" />
+    <rect x="5" y="27" width="21" height="21" rx="7" />
+    <rect x="31" y="1" width="21" height="21" rx="7" />
+    <rect x="31" y="27" width="21" height="21" rx="7" />
     </g>
     {/* <defs>
     <filter id="filter0_d_3_116" x="0" y="0" width="57" height="57" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">

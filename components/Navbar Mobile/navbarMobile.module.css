@@ -1,12 +1,23 @@
-
-
-@media screen and (max-aspect-ratio: 2 / 3){
-    .nav{
-        display: flex;
-    }
+.nav{
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    height: 50px;
+    padding-inline: 20px;
+    top: 0;
+    width: calc(100% - 20px * 2);
+    margin-top: 21px;
+}
+.projects{
+    fill: transparent;
+    stroke: #D9D9D9;
+    stroke-width: 2px;
+}
+.projects:hover{
+    fill: #D9D9D9;
 }
 
-@media screen and (min-aspect-ratio: 2/3) and (max-width: 600px) {
+@media screen and (min-aspect-ratio: 2/3) and (min-width: 600px) {
     .nav{
         display: none !important;
     }

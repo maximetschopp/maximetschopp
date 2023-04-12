@@ -15,7 +15,7 @@ export default function Home() {
       <div className={styles.projectContainer}>
         {projects.map((project) => {
           return(
-            <Project {...project} />
+            <Project key={project.name} {...project} />
           )
         })}
       </div>
