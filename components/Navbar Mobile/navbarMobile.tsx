@@ -1,5 +1,4 @@
 import styles from './navbarMobile.module.css';
-import Logo from '@/components/Logo/logo';
 
 export default function NavbarMobile() {
 
