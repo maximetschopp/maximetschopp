@@ -8,11 +8,10 @@ import { inter, spaceGrotesk } from '@/app/utils/font';
 import { useState } from 'react';
 import TagContainer from '../tagContainer/tagContainer';
 import Thumbnail from '../Thumbnail/thumbnail';
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 export default function Navbar() {
 
-    const router = useRouter();
     let projects = projectData.projects;
     let projectsByCategory = {} as { [key: string]: ProjectProps[] };
     const [previousCategory, setPreviousCategory] = useState<string | undefined>(undefined);
@@ -38,6 +37,7 @@ export default function Navbar() {
         let categoryProjects = projectsByCategory[category];
         let projectsList = categoryProjects.map((project) => {
             return(
+                <Link href={"/project/" + project.dir} style={{textDecoration : "none", color : "var(--foreground-color)"}}>
                 <div
                   className={styles.project + " " + spaceGrotesk.className}
                   key={project.name}
@@ -45,10 +45,10 @@ export default function Navbar() {
                   data-category={category}
                   onMouseEnter={handleProjectHover}
                   onMouseOver={handleProjectHover}
-                  onClick={() => handleProjectClick(project.dir)} // add onClick here
                 >
                   {project.name}
                 </div>
+                </Link>
             )
         });
         setCategoryProjects(projectsList);
@@ -71,27 +71,19 @@ export default function Navbar() {
         setHoveredProject(projectObj);
     }
 
-    const handleLogoClick = () => {
-        router.push('/');
-    }
-    const handleContactClick = () => {
-        router.push('/about');
-    }
-    const handleProjectClick = (dir : string) => {
-        router.push('/project/' + dir);
-    }
-
     return (
         <nav className={styles.navbar + " " + styles.fixed + " " + inter.className}>
-            <div className={styles.logo_container} onClick={handleLogoClick}>
-                <Logo />
-            </div>
+            <Link href="/">
+                <div className={styles.logo_container}>
+                    <Logo />
+                </div>
+            </Link>
             <div className={styles.dropdown_container}>
                 {Object.keys(projectsByCategory).map((category) => {
                     return(
                         <div className={styles.category} key={category}
                             data-category={category} onMouseEnter={handleCategoryHover}
-                            onClick={handleCategoryHover} //onMouseOver={handleCategoryHover}
+                            onClick={handleCategoryHover}
                         >{category}</div>
                     )
                 })}
@@ -114,9 +106,11 @@ export default function Navbar() {
                     { !hoveredProject && <h1>&lt;-- please select a project </h1> }
                 </div>
             </div>
-            <div onClick={handleContactClick}>
-                Contact
-            </div>
+            <Link href="/about" style={{textDecoration : "none", color: "var(--foreground-color)"}}>
+                <div>
+                    Contact
+                </div>
+            </Link>
         </nav>
     );
 }

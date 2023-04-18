@@ -5,26 +5,28 @@ import styles from './project.module.css'
 import { spaceGrotesk, inter } from '@/app/utils/font'
 import TagContainer from "../tagContainer/tagContainer"
 import Thumbnail from "../Thumbnail/thumbnail";
-// import { useRouter } from 'next/navigation'
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Project({name, desktop_thumbnail, mobile_thumbnail, tags, category, grid_span, accentColor, dir} : ProjectProps) {
 
-    // let thumbnail = null;
-    // if(desktop_thumbnail.includes("mp4")){
-    //     thumbnail = <video className={styles.video + " zoomtofill"} src={desktop_thumbnail} autoPlay loop muted playsInline />
-    // } else {
-    //     thumbnail = <img className={styles.image} src={desktop_thumbnail} />
-    // }
-    // const router = useRouter();
-    
-    // const handleProjectClick = () => {
-    //     router.push('/project/' + dir);
-    // }
-
     desktop_thumbnail = desktop_thumbnail ? desktop_thumbnail : "mobile_thumbnail";
     const [thumbnailUrl, setThumbnailUrl] = useState(desktop_thumbnail);
+
+    useEffect(() => {
+        function handleResize() {
+            if(window.innerWidth / window.innerHeight < 2/3) {
+                setThumbnailUrl(mobile_thumbnail);
+            } else {
+                setThumbnailUrl(desktop_thumbnail);
+            }
+        }
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, [desktop_thumbnail, mobile_thumbnail]);
+
+    // swap url on window resize to mobile thumbnail
+
 
     return(
         <Link href={"/project/" + dir} style={{gridColumn : "span " + grid_span, textDecoration : 'none'}}>

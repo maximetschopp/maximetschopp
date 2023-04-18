@@ -97,6 +97,7 @@
         display: grid;
         gap: 5px;
         grid-template-rows: auto auto;
+        height: fit-content;
     }
     .projectTitle{
         font-size: 21px;
@@ -144,6 +145,7 @@
         left: 0;
         top: 0;
         width: 100vw;
+        height: auto;
         transform: translate(0, 0);
         padding-inline: 5px;
     }

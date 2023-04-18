@@ -4,7 +4,7 @@
     place-items: center;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
     --background-start: rgba(28, 28, 28, 1);
     --background-end: rgba(28, 28, 28, 1);
