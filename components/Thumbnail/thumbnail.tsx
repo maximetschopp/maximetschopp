@@ -10,12 +10,12 @@ type ThumbnailProps = {
 
 export default function Thumbnail({src, classname, dir, onClickFunction} : ThumbnailProps){
 
-    let targetUrl = "/projects/" + dir;
+    let targetUrl = "/project/" + dir;
 
     if(src.includes("mp4")){
         return ( 
             <Link href={targetUrl} onClick={() => onClickFunction && onClickFunction()}>
-                <video className={classname + " zoomtofill"} src={src} autoPlay loop muted playsInline/>
+                <video className={classname} src={src} autoPlay loop muted playsInline/>
             </Link>
         );
     } else {
