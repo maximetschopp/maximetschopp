@@ -4,22 +4,23 @@ import Link from "next/link";
 type ThumbnailProps = {
     src: string,
     classname?: string,
-    dir: string
+    dir: string,
+    onClickFunction?: Function
 }
 
-export default function Thumbnail({src, classname, dir} : ThumbnailProps){
+export default function Thumbnail({src, classname, dir, onClickFunction} : ThumbnailProps){
 
-    let targetUrl = "/project/" + dir;
+    let targetUrl = "/projects/" + dir;
 
     if(src.includes("mp4")){
         return ( 
-            <Link href={targetUrl}>
-                <video className={classname + " zoomtofill"} src={src} autoPlay loop muted playsInline />
+            <Link href={targetUrl} onClick={() => onClickFunction && onClickFunction()}>
+                <video className={classname + " zoomtofill"} src={src} autoPlay loop muted playsInline/>
             </Link>
         );
     } else {
         return ( 
-            <Link href={targetUrl}>
+            <Link href={targetUrl} onClick={() => onClickFunction && onClickFunction()}>
                 <img className={classname} src={src}/>
             </Link>
         );

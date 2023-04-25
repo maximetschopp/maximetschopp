@@ -37,10 +37,12 @@ export default function Navbar() {
         let categoryProjects = projectsByCategory[category];
         let projectsList = categoryProjects.map((project) => {
             return(
-                <Link href={"/project/" + project.dir} style={{textDecoration : "none", color : "var(--foreground-color)"}}>
+                <Link href={"/project/" + project.dir} style={{textDecoration : "none", color : "var(--foreground-color)"}}
+                    key={project.name}
+                    onClick={hideNavbar}
+                >
                 <div
                   className={styles.project + " " + spaceGrotesk.className}
-                  key={project.name}
                   data-project={project.name}
                   data-category={category}
                   onMouseEnter={handleProjectHover}
@@ -71,6 +73,13 @@ export default function Navbar() {
         setHoveredProject(projectObj);
     }
 
+    const hideNavbar = () => {
+        // get element with className styles.navbar_container
+        let navbarContainer = document.getElementsByClassName(styles.navbar_container)[0];
+        // set display to none !important
+        navbarContainer.setAttribute("style", "display: none");
+    }
+
     return (
         <nav className={styles.navbar + " " + styles.fixed + " " + inter.className}>
             <Link href="/">
@@ -95,7 +104,7 @@ export default function Navbar() {
                         hoveredProject &&
                         <div className={styles.project_info}>
                             <div className={styles.projectThumbnail}>
-                                <Thumbnail src={hoveredProject.desktop_thumbnail} classname={styles.thumbnail} dir={hoveredProject.dir} />
+                                <Thumbnail src={hoveredProject.desktop_thumbnail} onClickFunction={hideNavbar} classname={styles.thumbnail} dir={hoveredProject.dir} />
                             </div>
                             <div className={styles.projectTitle + ' ' + spaceGrotesk.className}>{hoveredProject.name}</div>
                             <TagContainer tags={hoveredProject.tags} category={hoveredProject.category} 
