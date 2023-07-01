@@ -5,10 +5,11 @@ import Logo from '../logo/logo';
 import styles from './navbar.module.css';
 import { projectData } from '@/app/utils/projectData';
 import { inter, spaceGrotesk } from '@/app/utils/font';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import TagContainer from '../tagContainer/tagContainer';
 import Thumbnail from '../Thumbnail/thumbnail';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 export default function Navbar() {
 
@@ -17,6 +18,9 @@ export default function Navbar() {
     const [previousCategory, setPreviousCategory] = useState<string | undefined>(undefined);
     const [categoryProjects, setCategoryProjects] = useState<JSX.Element[] | undefined>(undefined);
     const [hoveredProject, setHoveredProject] = useState<ProjectProps | undefined>(undefined);
+
+    const dropdownRef = useRef<HTMLDivElement>(null);
+    const Router = useRouter();
 
     projects.forEach((project : ProjectProps) => {
         // Get the category name for the current project
@@ -37,7 +41,7 @@ export default function Navbar() {
         let categoryProjects = projectsByCategory[category];
         let projectsList = categoryProjects.map((project) => {
             return(
-                <Link href={"/project/" + project.dir} style={{textDecoration : "none", color : "var(--foreground-color)"}}
+                <Link href={"/projects/" + project.dir} style={{textDecoration : "none", color : "var(--foreground-color)"}}
                     key={project.name}
                     onClick={hideNavbar}
                 >
@@ -75,13 +79,20 @@ export default function Navbar() {
 
     const hideNavbar = () => {
         // get element with className styles.navbar_container
-        let navbarContainer = document.getElementsByClassName(styles.navbar_container)[0];
-        // set display to none !important
-        navbarContainer.setAttribute("style", "display: none");
+        let navbarContainer = dropdownRef.current;
+        if(!navbarContainer) return;
+        navbarContainer.setAttribute("style", "display: auto");
+    }
+
+    const projectSelected = () => {
+        hideNavbar();
+        if (!hoveredProject) return;
+        const url = "/projects/" + hoveredProject.dir;
+        Router.push(url);
     }
 
     return (
-        <nav className={styles.navbar + " " + styles.fixed + " " + inter.className}>
+        <nav className={styles.navbar + " " + styles.fixed + " " + inter.className} >
             <Link href="/">
                 <div className={styles.logo_container}>
                     <Logo />
@@ -96,15 +107,15 @@ export default function Navbar() {
                         >{category}</div>
                     )
                 })}
-                <div className={styles.expanded_container}>
+                <div className={styles.expanded_container} ref={dropdownRef}>
                     <div className={styles.project_list}>
                         {categoryProjects}
                     </div>
                     {
                         hoveredProject &&
-                        <div className={styles.project_info}>
+                        <div className={styles.project_info} onClick={projectSelected}>
                             <div className={styles.projectThumbnail}>
-                                <Thumbnail src={hoveredProject.desktop_thumbnail} onClickFunction={hideNavbar} classname={styles.thumbnail} dir={hoveredProject.dir} />
+                                <Thumbnail src={hoveredProject.desktop_thumbnail} classname={styles.thumbnail} />
                             </div>
                             <div className={styles.projectTitle + ' ' + spaceGrotesk.className}>{hoveredProject.name}</div>
                             <TagContainer tags={hoveredProject.tags} category={hoveredProject.category} 

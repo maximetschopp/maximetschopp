@@ -29,14 +29,13 @@ export default function Project({name, desktop_thumbnail, mobile_thumbnail, tags
 
 
     return(
-        <Link href={"/project/" + dir} style={{gridColumn : "span " + grid_span, textDecoration : 'none'}}>
+        <Link href={"/projects/" + dir} style={{gridColumn : "span " + grid_span, textDecoration : 'none'}}>
         <article className={styles.project} style={{gridColumn : "span " + grid_span, color : accentColor}}>
             <div className={styles.desc + " " + spaceGrotesk.className}>
                 <div className={styles.title}>{name}</div>
                 <TagContainer category={category} tags={tags} tagColor={accentColor} categoryColor={accentColor} />
             </div>
-            <Thumbnail src={thumbnailUrl} classname={styles.thumbnail} 
-            dir={dir} />
+            <Thumbnail src={thumbnailUrl} classname={styles.thumbnail} />
         </article>
         </Link>
     )

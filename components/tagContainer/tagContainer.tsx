@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import styles from './tagContainer.module.css'
 import { inter } from '@/app/utils/font'
 
@@ -11,6 +12,7 @@ type Props = {
 export default function TagContainer({tags, category, tagColor, categoryColor} : Props) {
 
     let categoryBackgroundColor = getColor(category);
+    console.log(tagColor);
 
     return(
         <div className={styles.tag_container + " " + inter.className}
@@ -29,7 +31,9 @@ export default function TagContainer({tags, category, tagColor, categoryColor} :
                 return(
                     <div className={styles.tag} key={tag}
                     style={{
-                        border: "1px solid " + tagColor + " !important",
+                        borderWidth: "1px",
+                        borderStyle: "solid",
+                        borderColor: tagColor,
                         color: tagColor,
                     }}
                     >{tag}</div>

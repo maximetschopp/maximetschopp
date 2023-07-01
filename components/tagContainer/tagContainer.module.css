@@ -21,10 +21,8 @@
     color: inherit;
     flex: 0 0 auto;
     box-sizing: border-box;
-    border: 1px solid rgba(0, 0, 0, 0.56);
-}
-.category{
-    border: 1px solid rgba(0, 0, 0, 0.56);
+    /* border: 1px solid rgba(0, 0, 0, 0.56); */
+    border: auto;
 }
 @media screen and (max-aspect-ratio: 2 / 3){
     .tag{
